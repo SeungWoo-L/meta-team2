@@ -57,9 +57,26 @@ Tools and frameworks required:
 3. Install Flutter
 4. Install OpenEmbedded
 
-### Configuring BitBake Environment
-Steps to configure the BitBake environment.
+'''
+BBLAYERS ?= " \
+  /home/seame02/poky_src/poky/meta \
+  /home/seame02/poky_src/poky/meta-poky \
+  /home/seame02/poky_src/poky/meta-yocto-bsp \
+  /home/seame02/poky_src/poky/meta-raspberrypi \
+  /home/seame02/poky_src/poky/meta-clang \
+  /home/seame02/poky_src/poky/meta-flutter \
+  /home/seame02/poky_src/poky/meta-openembedded/meta-oe \
+  /home/seame02/poky_src/poky/meta-openembedded/meta-python \
+  /home/seame02/poky_src/poky/meta-openembedded/meta-multimedia \
+  /home/seame02/poky_src/poky/meta-openembedded/meta-networking \
+  /home/seame02/poky_src/poky/meta-team2 \
+  "
+'''
 
+### Configuring BitBake Environment
+Go to /poky
+'source oe-init-build-env'
+= You should run this cmd everytime when you do bitbake
 ### Managing Layers
 Instructions for adding and removing layers.
 
