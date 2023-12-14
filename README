@@ -38,4 +38,32 @@ Run 'bitbake-layers add-layer meta-team2'
 II. Misc
 ========
 
+# Yocto Project - Kirkstone Version Layers Pre-requisites
+
+This document outlines the prerequisite layers required for setting up the Yocto Project 'kirkstone' version. Ensure these layers are installed before configuring your build environment.
+
+## Introduction
+The Yocto Project's 'kirkstone' release requires specific layers to be pre-installed for successful configuration and build. This guide details the essential layers and setup instructions.
+
+## Essential Pre-requisite Layers
+- **poky/meta**: Core metadata layer, necessary for all Yocto Project builds.
+- **poky/meta-poky**: Additional metadata specific to the Poky build system.
+- **poky/meta-yocto-bsp**: Board Support Package (BSP) layer for Yocto-supported hardware.
+- **openembedded/meta-openembedded**: Collection of layers for OpenEmbedded, including OE-Core.
+- **meta-clang**: Layer for adding Clang compiler support, if not using the default GCC.
+
+## Version Requirement
+- Ensure all layers are compatible with the **'kirkstone'** release of the Yocto Project. It is crucial to use layers that match the version of your Yocto Project release to avoid compatibility issues.
+
+## Configuration Steps
+1. Clone the required layers from their respective repositories.
+2. Check out the 'kirkstone' branch in each repository.
+3. Update the `bblayers.conf` file to include paths to these layers.
+
+## Additional Notes
+- The setup may vary depending on the specific requirements of your build.
+- Always refer to the official Yocto Project documentation for 'kirkstone' for the most up-to-date information and detailed setup instructions.
+
+
+
 --- replace with specific information about the meta-team2 layer ---
