@@ -6,56 +6,15 @@ This README file contains information on the contents of the meta-team2 layer fo
 
 ## Table of Contents
 1. [Dependencies](#dependencies)
-2. [Patches](#patches)
-3. [Adding the meta-team2 layer to your build](#adding-the-meta-team2-layer-to-your-build)
-4. [Miscellaneous](#miscellaneous)
-5. [Raspberry Pi Project Setup Guide](#raspberry-pi-project-setup-guide)
+2. [Adding the meta-team2 layer to your build](#adding-the-meta-team2-layer-to-your-build)
+3. [Prerequisites](#prerequisites)
+4. [Installation Steps](#installation-steps)
+5. [Configuring BitBake Environment](#configuring-bitbake-environment)
+6. [Managing Layers](#managing-layers)
+7. [Adding Features in Recipes](#adding-features-in-recipes)
 
 ## Dependencies
 Dependencies for the meta-team2 layer:
-
-```
-  URI: <first dependency>
-  branch: <branch name>
-
-  URI: <second dependency>
-  branch: <branch name>
-
-  ...
-```
-
-## Patches
-Submit patches for the meta-team2 layer:
-
-- Mailing List: xxxx@zzzz.org
-- CC: Maintainer - XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
-
-## Adding the meta-team2 layer to your build
-To add the meta-team2 layer to your build, run:
-
-```
-bitbake-layers add-layer meta-team2
-```
-
-## Miscellaneous
-Additional information and steps for managing the meta-team2 layer.
-
-## Raspberry Pi Project Setup Guide
-This guide provides instructions for setting up a Raspberry Pi project environment.
-
-### Prerequisites
-Tools and frameworks required:
-
-- Meta Raspberry Pi
-- Clang
-- Flutter
-- OpenEmbedded
-
-### Installation Steps
-1. Install Meta Raspberry Pi
-2. Install Clang
-3. Install Flutter
-4. Install OpenEmbedded
 
 ```
 BBLAYERS ?= " \
@@ -72,6 +31,27 @@ BBLAYERS ?= " \
   /home/seame02/poky_src/poky/meta-team2 \
   "
 ```
+
+## Adding the meta-team2 layer to your build
+To add the meta-team2 layer to your build, run:
+
+```
+bitbake-layers add-layer meta-team2
+```
+
+### Prerequisites
+Tools and frameworks required:
+
+- Meta Raspberry Pi
+- Clang
+- Flutter
+- OpenEmbedded
+
+### Installation Steps
+1. Install Meta Raspberry Pi
+2. Install Clang
+3. Install Flutter
+4. Install OpenEmbedded
 
 ### Configuring BitBake Environment
 
