@@ -1,69 +1,76 @@
-This README file contains information on the contents of the meta-team2 layer.
 
-Please see the corresponding sections below for details.
+# meta-team2 Layer Documentation
 
-Dependencies
-============
+## Overview
+This README file contains information on the contents of the meta-team2 layer for OpenEmbedded and Yocto Project.
 
+## Table of Contents
+1. [Dependencies](#dependencies)
+2. [Patches](#patches)
+3. [Adding the meta-team2 layer to your build](#adding-the-meta-team2-layer-to-your-build)
+4. [Miscellaneous](#miscellaneous)
+5. [Raspberry Pi Project Setup Guide](#raspberry-pi-project-setup-guide)
+
+## Dependencies
+Dependencies for the meta-team2 layer:
+
+```
   URI: <first dependency>
   branch: <branch name>
 
   URI: <second dependency>
   branch: <branch name>
 
-  .
-  .
-  .
+  ...
+```
 
-Patches
-=======
+## Patches
+Submit patches for the meta-team2 layer:
 
-Please submit any patches against the meta-team2 layer to the xxxx mailing list (xxxx@zzzz.org)
-and cc: the maintainer:
+- Mailing List: xxxx@zzzz.org
+- CC: Maintainer - XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
 
-Maintainer: XXX YYYYYY <xxx.yyyyyy@zzzzz.com>
+## Adding the meta-team2 layer to your build
+To add the meta-team2 layer to your build, run:
 
-Table of Contents
-=================
+```
+bitbake-layers add-layer meta-team2
+```
 
-  I. Adding the meta-team2 layer to your build
- II. Misc
+## Miscellaneous
+Additional information and steps for managing the meta-team2 layer.
 
+## Raspberry Pi Project Setup Guide
+This guide provides instructions for setting up a Raspberry Pi project environment.
 
-I. Adding the meta-team2 layer to your build
-=================================================
+### Prerequisites
+Tools and frameworks required:
 
-Run 'bitbake-layers add-layer meta-team2'
+- Meta Raspberry Pi
+- Clang
+- Flutter
+- OpenEmbedded
 
-II. Misc
-========
+### Installation Steps
+1. Install Meta Raspberry Pi
+2. Install Clang
+3. Install Flutter
+4. Install OpenEmbedded
 
-# Yocto Project - Kirkstone Version Layers Pre-requisites
+### Configuring BitBake Environment
+Steps to configure the BitBake environment.
 
-This document outlines the prerequisite layers required for setting up the Yocto Project 'kirkstone' version. Ensure these layers are installed before configuring your build environment.
+### Managing Layers
+Instructions for adding and removing layers.
 
-## Introduction
-The Yocto Project's 'kirkstone' release requires specific layers to be pre-installed for successful configuration and build. This guide details the essential layers and setup instructions.
+- Add a Layer: `bitbake-layers add-layer [path/to/your/layer]`
+- Remove a Layer: `bitbake-layers remove-layer [layer-name]`
 
-## Essential Pre-requisite Layers
-- **poky/meta**: Core metadata layer, necessary for all Yocto Project builds.
-- **poky/meta-poky**: Additional metadata specific to the Poky build system.
-- **poky/meta-yocto-bsp**: Board Support Package (BSP) layer for Yocto-supported hardware.
-- **openembedded/meta-openembedded**: Collection of layers for OpenEmbedded, including OE-Core.
-- **meta-clang**: Layer for adding Clang compiler support, if not using the default GCC.
+### Adding Features in Recipes
+Steps to add new features in recipes.
 
-## Version Requirement
-- Ensure all layers are compatible with the **'kirkstone'** release of the Yocto Project. It is crucial to use layers that match the version of your Yocto Project release to avoid compatibility issues.
-
-## Configuration Steps
-1. Clone the required layers from their respective repositories.
-2. Check out the 'kirkstone' branch in each repository.
-3. Update the `bblayers.conf` file to include paths to these layers.
-
-## Additional Notes
-- The setup may vary depending on the specific requirements of your build.
-- Always refer to the official Yocto Project documentation for 'kirkstone' for the most up-to-date information and detailed setup instructions.
-
-
-
---- replace with specific information about the meta-team2 layer ---
+1. Find recipes on [OpenEmbedded Layer Index](https://layers.openembedded.org/layerindex/branch/master/recipes/).
+2. Check and match all dependencies.
+3. Find recipes in layers downloaded in prerequisites.
+4. Modify `recipes-core/images/team2-rpi-image.bbappend`.
+5. Run `bitbake` and pray.
