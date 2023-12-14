@@ -70,7 +70,7 @@ Instructions for adding and removing layers.
 ### Adding Features in Recipes
 Steps to add new features in recipes.
 
-1. Find recipes on [OpenEmbedded Layer Index](https://layers.openembedded.org/layerindex/branch/master/recipes/).
+1. Find recipes in [OpenEmbedded Layer Index](https://layers.openembedded.org/layerindex/branch/master/recipes/).
 2. Check and match all dependencies.
 3. Find recipes in layers downloaded in prerequisites.
 4. Modify `recipes-core/images/team2-rpi-image.bbappend`.
