@@ -1,5 +1,8 @@
-#ENABLE_I2C
+#ACTIVATE_I2C
 ENABLE_I2C = "1"
+
+#Remove Splash
+DISABLE_SPLASH = "1"
 
 do_deploy:append() {
     echo "# Turn on spi">> $CONFIG
@@ -9,6 +12,9 @@ do_deploy:append() {
     echo "dtoverlay=spil-3cs" >> $CONFIG
     echo "dtoverlay=mcp251xfd,spi0-0,interrupt=25" >> $CONFIG
     echo "dtoverlay=mcp251xfd,spi1-0,interrupt=24" >> $CONFIG
+    
+    echo "# Install dtbo for waveshare 7.9inch LCD" >> $CONFIG
+    echo "dtoverlay=vc4-kms-dsi-waveshare-panel,7_9_inch" >> $CONFIG
     
     echo "# Setting for 7Inch HDMI LCD(H)" >> $CONFIG
     echo "hdmi_force_hotpulg=1" >> $CONFIG
@@ -21,7 +27,6 @@ do_deploy:append() {
     echo "dtparam=audio=on" >> $CONFIG
     echo "dtoverlay=vc4-kms-v3d,noaudio" >> $CONFIG
 
-    echo "# dtbo for waveshare 7.9inch LCD" >> $CONFIG
-    echo "dtoverlay=vc4-kms-dsi-waveshare-panel,7_9_inch" >> $CONFIG
-    
+    echo "#start_x=1" >> $CONFIG
+    echo "#gpu_mem=256" >> $CONFIG
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+  <remote name="yocto" fetch="git://git.yoctoproject.org/" />
+  <remote name="openembedded" fetch="git://git.openembedded.org/" />
+  <remote name="github" fetch="https://github.com/" />
+  
+  <default remote="yocto" revision="kirkstone" />
+
+  <project name="poky" path="poky" />
+  <project name="meta-raspberrypi" path="poky/meta-raspberrypi" revision="482d864b8f1af84915ed6a9641e80af4e49a1f63" />
+  <project name="meta-clang" path="poky/meta-clang" revision="9b08495e6bcef524789aefb6a7cc80fdfd2ff409"/>
+  <project name="meta-flutter" path="poky/meta-flutter" revision="6b05aa798b50b66e4926e1bd22aa60fcb3e91c7b"/>
+  <project name="meta-openembedded" path="poky/meta-openembedded" remote="openembedded" />
+
+</manifest>
