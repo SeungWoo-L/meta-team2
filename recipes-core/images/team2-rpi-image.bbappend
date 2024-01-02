@@ -7,6 +7,7 @@ ENV_SETTING = " \
 	libsocketcan \
 	openssh \
 	bcm2835-dev \
+	udev-rules-rpi \
 "
 
 META_OE = " \
@@ -36,18 +37,29 @@ PYTHON_SETTING = " \
 	python3-supervisor \
 	python3-numpy \
 	python3-pip \
-	python3-wheel \
-	python3-adafruit-pureio \
-	python3-adafruit-platformdetect \
-	python3-adafruit-circuitpython-register \
-	python3-adafruit-blinka \
-	python3-adafruit-circuitpython-pca9685 \
-	python3-adafruit-circuitpython-busdevice \
-	python3-pyserial \
-	python3-pyusb \
-	python3-typing-extensions \
 "
 
+PIRACER_SETTING = "\
+	python3-adafruit-blinka \
+	python3-adafruit-circuitpython-busdevice \
+	python3-adafruit-circuitpython-framebuf \
+	python3-adafruit-circuitpython-ina219 \
+	python3-adafruit-circuitpython-pca9685 \
+	python3-adafruit-circuitpython-register \
+	python3-adafruit-circuitpython-requests \
+	python3-adafruit-circuitpython-ssd1306 \
+	python3-adafruit-circuitpython-typing \
+	python3-adafruit-platformdetect \
+	python3-adafruit-pureio \
+	python3-piracer-py \
+	python3-pyftdi \
+	python3-pyserial \
+	python3-pyusb \
+	rpi-gpio \
+	python3-typing-extensions \
+	python3-wheel \
+	opencv \
+"
 
 
 IMAGE_INSTALL += " \
@@ -56,5 +68,6 @@ IMAGE_INSTALL += " \
 	${FLUTTER} \
 	${VSOMEIP} \
 	${PYTHON_SETTING} \
+	${PIRACER_SETTING} \
 "
 	
