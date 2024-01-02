@@ -1,12 +1,12 @@
 SUMMARY = "Can Receiver"
 SECTION = "apps"
 LICENSE = "CC-BY-SA-4.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=fba3b94d88bfb9b81369b869a1e9a20f"
+LIC_FILES_CHKSUM = "file://../LICENSE;md5=fba3b94d88bfb9b81369b869a1e9a20f"
 
-SRC_URI = "git://github.com/SeungWoo-L/can_receiver/releases/tag/0.1;protocol=https;branch=main;tag=0.1"
-#SRCREV = "594a8e7f479b29230bc7a382da5dc1b63772d865"
+SRC_URI = "git://github.com/SeungWoo-L/can_receiver.git;protocol=https;branch=dev"
+SRCREV = "7097d815d79532769328cb7a7ea0e0458628dad4"
 
-S = "${WORKDIR}/can_receiver/git"
+S = "${WORKDIR}/git/can_receiver"
 
 inherit cmake
 

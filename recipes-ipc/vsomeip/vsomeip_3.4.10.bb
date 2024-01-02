@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=815ca599c9df247a0c7f619bab123dad"
 DEPENDS = "boost dlt-daemon"
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRCREV = "13f9c89ced6ffaeb1faf485152e27e1f40d234cd"
+SRCREV = "02c199dff8aba814beebe3ca417fd991058fe90c"
 SRC_URI = "git://github.com/GENIVI/${BPN}.git;protocol=https;nobranch=1"
 S = "${WORKDIR}/git"
 
