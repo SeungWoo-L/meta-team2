@@ -51,16 +51,19 @@ PIRACER_SETTING = "\
 	python3-adafruit-circuitpython-typing \
 	python3-adafruit-platformdetect \
 	python3-adafruit-pureio \
-	python3-piracer-py \
 	python3-pyftdi \
 	python3-pyserial \
 	python3-pyusb \
-	rpi-gpio \
 	python3-typing-extensions \
 	python3-wheel \
 	opencv \
+	rpi-gpio \
+	python3-piracer-py \
 "
-
+CUSTOM_APPS = "\
+	canreceiver-dev \
+	carinfo-dev \
+"
 
 IMAGE_INSTALL += " \
 	${ENV_SETTING} \
@@ -69,5 +72,6 @@ IMAGE_INSTALL += " \
 	${VSOMEIP} \
 	${PYTHON_SETTING} \
 	${PIRACER_SETTING} \
+	${CUSTOM_APPS} \
 "
 	

@@ -1,12 +1,12 @@
-SUMMARY = "Can Receiver"
+SUMMARY = "Can Info Service"
 SECTION = "apps"
 LICENSE = "CC-BY-SA-4.0"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fba3b94d88bfb9b81369b869a1e9a20f"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI = "git://github.com/SeungWoo-L/can_receiver.git;protocol=https;branch=main"
-SRCREV = "089e4123e351bc48e5b45c9d4bb89312253c54c9"
+SRC_URI = "git://github.com/SeungWoo-L/car_info.git;protocol=https;branch=swlee"
+SRCREV = "32d2cbae43dcb6fa525c29d0cf73fe23cb948a62"
 
 S = "${WORKDIR}/git"
 
@@ -17,5 +17,6 @@ DEPENDS = " \
            vsomeip \
            common-api-c++-someip \
            python3 \
+           boost \
 "
   

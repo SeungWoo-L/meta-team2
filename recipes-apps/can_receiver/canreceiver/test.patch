@@ -1,7 +1,0 @@
---- a/CMakeLists.txt	2024-01-03 16:42:25.850934849 +0100
-+++ b/CMakeLists.txt	2024-01-03 16:48:01.438450863 +0100
-@@ -49,3 +49,4 @@
-     CommonAPI
-     CommonAPI-SomeIP
- )
-+install(TARGETS CanReceiver DESTINATION /usr/bin)
