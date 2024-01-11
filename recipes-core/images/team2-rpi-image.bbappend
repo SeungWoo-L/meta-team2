@@ -63,6 +63,8 @@ PIRACER_SETTING = "\
 CUSTOM_APPS = "\
 	canreceiver-dev \
 	carinfo-dev \
+	carcontrol \
+	carcontrol-dev \
 "
 
 IMAGE_INSTALL += " \
