@@ -5,11 +5,11 @@ LICENSE = "CLOSED"
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI = "git://github.com/kianwasabi/car_control.git;protocol=https;branch=main"
-SRCREV = "ca500ca5eb4a49d78639f1fe2908139e8e20dcb7"
+SRCREV = "82f7c359a6914263c49b23bfad9d4dfda749ca48"
 
 S = "${WORKDIR}/git"
 
-inherit cmake lib_package pkgconfig
+inherit cmake
 
 DEPENDS = " \
            common-api-c++ \
@@ -19,7 +19,5 @@ DEPENDS = " \
            boost \
 "
 
-FILES_${PN} += "${libdir}/CarControl/gamepad.py \
-		${libdir}/CarControl/vehicles.py"
 
-FILES_${PN}-dev += "${libdir}/piracer/CarControl"
+FILES:${PN}-dev += "${libdir}/piracer/CarControl"

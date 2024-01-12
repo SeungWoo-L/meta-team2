@@ -12,6 +12,7 @@ inherit cmake lib_package pkgconfig
 
 SRCREV = "e3818cb0ad5b9c734cca361edccb16ca93081728"
 SRC_URI = "git://github.com/GENIVI/capicxx-core-runtime.git;protocol=https;nobranch=1"
+SRC_URI += "file://commonapi.ini"
 
 S = "${WORKDIR}/git"
 
@@ -21,3 +22,9 @@ EXTRA_OECMAKE += "-DCMAKE_INSTALL_PREFIX=/usr \
     "
 
 FILES_${PN}-dev += "${libdir}/cmake"
+
+do_install:append(){
+	install -d ${D}/etc
+	install -m0644 ${WORKDIR}/commonapi.ini ${D}/etc/
+}
+

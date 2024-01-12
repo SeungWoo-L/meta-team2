@@ -1,12 +1,11 @@
 SUMMARY = "Can Info Service"
 SECTION = "apps"
-LICENSE = "CC-BY-SA-4.0"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=fba3b94d88bfb9b81369b869a1e9a20f"
+LICENSE = "CLOSED"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-SRC_URI = "git://github.com/SeungWoo-L/car_info.git;protocol=https;branch=swlee"
-SRCREV = "5b33897598c1d6f32310eb01f4912b2e8bfd0c43"
+SRC_URI = "git://github.com/SeungWoo-L/car_info.git;protocol=https;branch=patch-1"
+SRCREV = "39a646b92a0d481622510050e1112aebbd37e4c1"
 
 S = "${WORKDIR}/git"
 
@@ -19,4 +18,5 @@ DEPENDS = " \
            python3 \
            boost \
 "
-  
+
+FILES:${PN}-dev += "${libdir}/piracer/CarInfo"  

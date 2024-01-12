@@ -27,4 +27,6 @@ do_configure:prepend(){
 
 do_install:append() {
     mv ${D}/usr/etc ${D}
+    rm -rf ${D}/etc/vsomeip/*
 }
+
