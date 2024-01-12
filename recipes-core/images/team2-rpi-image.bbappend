@@ -8,6 +8,7 @@ ENV_SETTING = " \
 	openssh \
 	bcm2835-dev \
 	udev-rules-rpi \
+	supervisor \
 "
 
 META_OE = " \
