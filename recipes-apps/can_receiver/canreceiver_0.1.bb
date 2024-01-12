@@ -6,7 +6,7 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=fba3b94d88bfb9b81369b869a1e9a20f"
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI = "git://github.com/SeungWoo-L/can_receiver.git;protocol=https;branch=main"
-SRCREV = "6d70b548d593697f58939bb6aa9930cbc221b065"
+SRCREV = "9319517925deadc63e15965cac2434447e402ff5"
 
 S = "${WORKDIR}/git"
 
