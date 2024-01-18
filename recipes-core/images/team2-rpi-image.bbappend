@@ -1,6 +1,7 @@
 ENV_SETTING = " \
 	nano \
 	bash \
+	tree \
 	wpa-supplicant \
 	git	\
 	can-utils \
@@ -19,6 +20,11 @@ FLUTTER = " \
 	flutter-engine \
 	flutter-pi \
 	flutter-gallery \
+	flutter-wayland-client \
+"
+
+FLUTTER_APP = " \
+	baseflow-geolocator \
 "
 	
 
@@ -76,5 +82,6 @@ IMAGE_INSTALL += " \
 	${PYTHON_SETTING} \
 	${PIRACER_SETTING} \
 	${CUSTOM_APPS} \
+	${FLUTTER_APP} \
 "
 	
