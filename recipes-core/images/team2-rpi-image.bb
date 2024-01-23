@@ -6,7 +6,7 @@ inherit core-image
 IMAGE_FSTYPES = " \
                 tar.bz2 \
                 ext4 \
-		rpi-sdimg \
+                rpi-sdimg \
 "
 
 

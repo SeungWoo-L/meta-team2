@@ -24,7 +24,6 @@ FLUTTER = " \
 "
 
 FLUTTER_APP = " \
-	baseflow-geolocator \
 "
 	
 

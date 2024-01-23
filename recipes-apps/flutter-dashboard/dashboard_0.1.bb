@@ -15,9 +15,16 @@ LIC_FILES_CHKSUM = "file://LICENSE;md5=3ac21e3d8ebe7dd79f273ca11b9e7b4e"
 SRCREV = "d77920b4ced4a105ad35659fbe3958800d418fb9"
 SRC_URI = "git://github.com/flutter/gallery.git;protocol=https;nobranch=1"
 
+DEPENDS += "\
+    flutter-engine \
+    flutter-sdk-native \
+"
+
 S = "${WORKDIR}/git"
 
 PUBSPEC_APPNAME = "gallery"
 FLUTTER_APPLICATION_INSTALL_PREFIX = "/flutter"
 
-inherit flutter-app
+do_compile() {
+	flutter build linux
+}

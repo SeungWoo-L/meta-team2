@@ -1,0 +1,1 @@
+CMDLINE_ROOT_PARTITION = "/dev/sda2"
