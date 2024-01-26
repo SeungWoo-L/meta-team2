@@ -1,30 +1,22 @@
-#
-# Copyright (c) 2020-2023 Joel Winarske. All rights reserved.
-#
-
-SUMMARY = "Flutter Gallery Application"
-DESCRIPTION = "Flutter Gallery Application"
+SUMMARY = "Flutter Dashboard Application"
+DESCRIPTION = "Flutter Dashboard Application"
 AUTHOR = "Google"
-HOMEPAGE = "https://github.com/flutter/gallery"
-BUGTRACKER = "https://github.com/flutter/gallery/issues"
+HOMEPAGE = "https://github.com/Lagavulin9/Flutter_Dashboard"
+BUGTRACKER = "https://github.com/Lagavulin9/Flutter_Dashboard/issues"
 SECTION = "graphics"
 
-LICENSE = "BSD-3-Clause"
-LIC_FILES_CHKSUM = "file://LICENSE;md5=3ac21e3d8ebe7dd79f273ca11b9e7b4e"
+LICENSE = "CLOSED"
 
-SRCREV = "d77920b4ced4a105ad35659fbe3958800d418fb9"
-SRC_URI = "git://github.com/flutter/gallery.git;protocol=https;nobranch=1"
+SRCREV = "b659c79ff4e44e5e490a7f2f818bcb3794d1c6cc"
+SRC_URI = "git://github.com/Lagavulin9/Flutter_Dashboard.git;protocol=https;branch=main"
 
 DEPENDS += "\
-    flutter-engine \
     flutter-sdk-native \
 "
 
 S = "${WORKDIR}/git"
 
-PUBSPEC_APPNAME = "gallery"
+PUBSPEC_APPNAME = "flutter_dashboard"
 FLUTTER_APPLICATION_INSTALL_PREFIX = "/flutter"
 
-do_compile() {
-	flutter build linux
-}
+inherit flutter-app

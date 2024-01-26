@@ -15,5 +15,3 @@ EXTRA_OECMAKE += "-DUSE_INSTALLED_COMMONAPI=ON"
 
 FILES_${PN}-dev += "${libdir}/cmake"
 RDEPENDS_${PN}-dev = "vsomeip-dev"
-
-BBCLASSEXTEND = "nativesdk"

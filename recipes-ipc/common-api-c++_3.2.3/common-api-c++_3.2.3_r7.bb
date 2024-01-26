@@ -21,10 +21,14 @@ EXTRA_OECMAKE += "-DCMAKE_INSTALL_PREFIX=/usr \
     -DINSTALL_CMAKE_DIR:PATH=${baselib}/cmake/CommonAPI \
     "
 
+FILES_${PN} += "${libdir}/cmake"
+FILES_${PN} += "${includedir}/CommonAPI-3.2"
 FILES_${PN}-dev += "${libdir}/cmake"
 
 do_install:append(){
-	install -d ${D}/etc
-	install -m0644 ${WORKDIR}/commonapi.ini ${D}/etc/
+    install -d ${D}/etc
+    install -m0644 ${WORKDIR}/commonapi.ini ${D}/etc/
 }
+
+BBCLASSEXTEND = "nativesdk"
 
