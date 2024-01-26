@@ -17,10 +17,6 @@ META_OE = " \
 	libgpiod \ 
 	gtk+3 \
 	glib-2.0 \
-"
-
-META_OE = " \
-	libgpiod \
 	mpv \
 "
 
