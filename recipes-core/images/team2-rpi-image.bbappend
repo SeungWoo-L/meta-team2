@@ -10,17 +10,18 @@ ENV_SETTING = " \
 	bcm2835-dev \
 	udev-rules-rpi \
 	supervisor \
+	weston-init \
 "
 
 META_OE = " \
-	libgpiod \
+	libgpiod \ 
 "
 
 FLUTTER = " \
 	flutter-engine \
 	flutter-pi \
-	flutter-gallery \
 	flutter-wayland-client \
+	weston-start \
 "
 
 FLUTTER_APP = " \
