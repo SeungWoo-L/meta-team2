@@ -10,27 +10,16 @@ ENV_SETTING = " \
 	bcm2835-dev \
 	udev-rules-rpi \
 	supervisor \
-	weston-init \
 "
 
 META_OE = " \
 	libgpiod \ 
-	gtk+3 \
-	glib-2.0 \
 	mpv \
 "
 
-FLUTTER = " \
-	flutter-engine \
-	flutter-pi \
-	flutter-wayland-client \
-	weston-start \
-"
+FLUTTER = ""
 
-FLUTTER_APP = " \
-	dashboard \
-	headunit \
-"
+FLUTTER_APP = ""
 	
 
 VSOMEIP = " \
