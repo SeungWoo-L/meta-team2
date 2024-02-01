@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Map WaveShare Display to HDMI-1
-xinput map-to-output 'WaveShare WS170120' HDMI-1
+#Rotate the DSI-1 screen and ensure that all screens are positioned correctly.
+xrandr --output HDMI-1 --auto --output DSI-1 --rotate right --below HDMI-1
 
 # Disable device 'Goodix Capacitive TouchScreen'
 PREFIX="pointer:"
@@ -16,3 +16,6 @@ if [ -n "$DEVICE_ID" ]; then
 else
     echo "Device '$DEVICE_NAME' not found."
 fi
+
+# Map WaveShare Display to HDMI-1
+xinput map-to-output 'WaveShare WS170120' HDMI-1
