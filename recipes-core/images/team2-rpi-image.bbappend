@@ -10,6 +10,7 @@ ENV_SETTING = " \
 	bcm2835-dev \
 	udev-rules-rpi \
 	supervisor \
+	touchscreen-init \
 "
 
 META_OE = " \

@@ -7,8 +7,8 @@ IMAGE_FSTYPES = "rpi-sdimg"
 CORE_IMAGE_BASE_INSTALL = "\
 	packagegroup-core-boot \
 	packagegroup-base-extended \
-        packagegroup-core-x11 \
-        packagegroup-xfce-base \
+    packagegroup-core-x11 \
+    packagegroup-xfce-base \
 	${CORE_IMAGE_EXTRA_INSTALL} \
 "
 
