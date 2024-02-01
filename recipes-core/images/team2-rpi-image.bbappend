@@ -20,7 +20,9 @@ META_OE = " \
 
 FLUTTER = ""
 
-FLUTTER_APP = ""
+FLUTTER_APP = " \
+	dashboard \
+"
 	
 
 VSOMEIP = " \
