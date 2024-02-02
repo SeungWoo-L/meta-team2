@@ -7,16 +7,15 @@ SECTION = "graphics"
 
 LICENSE = "CLOSED"
 
-SRCREV = "b659c79ff4e44e5e490a7f2f818bcb3794d1c6cc"
-SRC_URI = "git://github.com/Lagavulin9/Flutter_Dashboard.git;protocol=https;branch=main"
-
-DEPENDS += "\
-    flutter-sdk-native \
-"
+SRCREV = "4b779d9aff6a3f11160e5c37b0af3339201caf03"
+SRC_URI = "git://github.com/Lagavulin9/Flutter_Dashboard.git;protocol=https;branch=bundle"
 
 S = "${WORKDIR}/git"
 
-PUBSPEC_APPNAME = "flutter_dashboard"
-FLUTTER_APPLICATION_INSTALL_PREFIX = "/flutter"
+do_install(){
+    install -d ${D}${datadir}/flutter/flutter-app/Dashboard/
+    cp -r ${S}/bundle/* ${D}${datadir}/flutter/flutter-app/Dashboard/
 
-inherit flutter-app
+}
+
+INSANE_SKIP:${PN} += "file-rdeps ldflags installed-vs-shipped"

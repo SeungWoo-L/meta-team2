@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
 SRC_URI = "git://github.com/kianwasabi/car_control.git;protocol=https;branch=main"
-SRCREV = "a13cb14130a84b244c042594a768907d4ecca674"
+SRCREV = "1914c2286b9d88bff3ecd7d3ca22735d0588d727"
 
 S = "${WORKDIR}/git"
 
