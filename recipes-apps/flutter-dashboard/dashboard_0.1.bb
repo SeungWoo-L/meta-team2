@@ -12,10 +12,18 @@ SRC_URI = "git://github.com/Lagavulin9/Flutter_Dashboard.git;protocol=https;bran
 
 S = "${WORKDIR}/git"
 
+FILES:${PN} += "\
+    ${datadir}/flutter/flutter-app/Dashboard/* \
+    ${datadir}/flutter/flutter-app/Dashboard/*/* \
+    ${datadir}/flutter/flutter-app/Dashboard/*/*/* \
+    ${datadir}/flutter/flutter-app/Dashboard/*/*/*/* \
+    ${datadir}/flutter/flutter-app/Dashboard/*/*/*/*/* \
+"
+
 do_install(){
     install -d ${D}${datadir}/flutter/flutter-app/Dashboard/
     cp -r ${S}/bundle/* ${D}${datadir}/flutter/flutter-app/Dashboard/
 
 }
 
-INSANE_SKIP:${PN} += "file-rdeps ldflags installed-vs-shipped"
+INSANE_SKIP:${PN} += "file-rdeps ldflags"

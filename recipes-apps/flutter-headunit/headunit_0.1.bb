@@ -1,5 +1,5 @@
-SUMMARY = "Flutter HeadUnit Application"
-DESCRIPTION = "Flutter HeadUnit Application"
+SUMMARY = "Flutter Headunit Application"
+DESCRIPTION = "Flutter Headunit Application"
 AUTHOR = "Google"
 HOMEPAGE = "https://github.com/Lagavulin9/Flutter_Head-Unit"
 BUGTRACKER = "https://github.com/Lagavulin9/Flutter_Head-Unit/issues"
@@ -7,17 +7,23 @@ SECTION = "graphics"
 
 LICENSE = "CLOSED"
 
-SRCREV = "eb096e886747675cdc30d2282dbcd6e3e9450b68"
-SRC_URI = "git://github.com/Lagavulin9/Flutter_Head-Unit.git;protocol=https;branch=dev-figma"
-
-DEPENDS += "\
-    flutter-sdk-native \
-    mpv \
-"
+SRCREV = "bbb9a9157847b43ee4f9b803d84dc2d84af87994"
+SRC_URI = "git://github.com/Lagavulin9/Flutter_Head-Unit.git;protocol=https;branch=bundle"
 
 S = "${WORKDIR}/git"
 
-PUBSPEC_APPNAME = "flutter_head_unit"
-FLUTTER_APPLICATION_INSTALL_PREFIX = "/flutter"
+FILES:${PN} += "\
+    ${datadir}/flutter/flutter-app/Headunit/* \
+    ${datadir}/flutter/flutter-app/Headunit/*/* \
+    ${datadir}/flutter/flutter-app/Headunit/*/*/* \
+    ${datadir}/flutter/flutter-app/Headunit/*/*/*/* \
+    ${datadir}/flutter/flutter-app/Headunit/*/*/*/*/* \
+"
 
-inherit flutter-app
+do_install(){
+    install -d ${D}${datadir}/flutter/flutter-app/Headunit/
+    cp -r ${S}/bundle/* ${D}${datadir}/flutter/flutter-app/Headunit/
+
+}
+
+INSANE_SKIP:${PN} += "file-rdeps ldflags"

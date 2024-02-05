@@ -10,7 +10,7 @@ ENV_SETTING = " \
 	bcm2835-dev \
 	udev-rules-rpi \
 	supervisor \
-	touchscreen-init \
+	xdotool \
 "
 
 META_OE = " \
@@ -18,10 +18,12 @@ META_OE = " \
 	mpv \
 "
 
-FLUTTER = ""
-
 FLUTTER_APP = " \
 	dashboard \
+	dashboard-auto \
+	headunit \
+	headunit-auto \
+	touchscreen-init \
 "
 	
 
@@ -74,7 +76,6 @@ CUSTOM_APPS = "\
 IMAGE_INSTALL += " \
 	${ENV_SETTING} \
 	${META_OE} \
-	${FLUTTER} \
 	${VSOMEIP} \
 	${PYTHON_SETTING} \
 	${PIRACER_SETTING} \
@@ -82,3 +83,4 @@ IMAGE_INSTALL += " \
 	${FLUTTER_APP} \
 "
 	
+IMAGE_INSTALL:remove = "xfce4-session xfce4-settings xfce4-panel xinput-calibrator"
