@@ -24,6 +24,7 @@ FLUTTER_APP = " \
 	headunit \
 	headunit-auto \
 	touchscreen-init \
+	window-init \
 "
 	
 
@@ -83,4 +84,3 @@ IMAGE_INSTALL += " \
 	${FLUTTER_APP} \
 "
 	
-IMAGE_INSTALL:remove = "xfce4-session xfce4-settings xfce4-panel xinput-calibrator"

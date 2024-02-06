@@ -19,3 +19,6 @@ fi
 
 # Map WaveShare Display to HDMI-1
 xinput map-to-output 'WaveShare WS170120' HDMI-1
+
+
+
