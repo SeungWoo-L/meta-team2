@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Flutter Dashboard
+OnlyShowIn=XFCE
+Exec=/usr/share/flutter/flutter-app/Dashboard/flutter_dashboard
+X-GNOME-Autostart-enabled=true
+Hidden=true

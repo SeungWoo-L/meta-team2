@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Flutter HeadUnit
+OnlyShowIn=XFCE
+Exec=/usr/share/flutter/flutter-app/Headunit/flutter_head_unit
+X-GNOME-Autostart-enabled=true
+Hidden=true

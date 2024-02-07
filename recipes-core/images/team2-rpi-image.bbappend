@@ -9,8 +9,9 @@ ENV_SETTING = " \
 	openssh \
 	bcm2835-dev \
 	udev-rules-rpi \
+	udev-extraconf \
 	supervisor \
-	touchscreen-init \
+	xdotool \
 "
 
 META_OE = " \
@@ -18,10 +19,15 @@ META_OE = " \
 	mpv \
 "
 
-FLUTTER = ""
-
 FLUTTER_APP = " \
 	dashboard \
+	dashboard-dev \
+	dashboard-auto \
+	headunit \
+	headunit-dev \
+	headunit-auto \
+	touchscreen-init \
+	window-init \
 "
 	
 
@@ -74,7 +80,6 @@ CUSTOM_APPS = "\
 IMAGE_INSTALL += " \
 	${ENV_SETTING} \
 	${META_OE} \
-	${FLUTTER} \
 	${VSOMEIP} \
 	${PYTHON_SETTING} \
 	${PIRACER_SETTING} \
