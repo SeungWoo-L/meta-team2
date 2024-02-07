@@ -7,7 +7,7 @@ SECTION = "graphics"
 
 LICENSE = "CLOSED"
 
-SRCREV = "4b779d9aff6a3f11160e5c37b0af3339201caf03"
+SRCREV = "52ef2934a7ad02f8f5524ecdd2991e585ecdd3f1"
 SRC_URI = "git://github.com/Lagavulin9/Flutter_Dashboard.git;protocol=https;branch=bundle"
 
 S = "${WORKDIR}/git"

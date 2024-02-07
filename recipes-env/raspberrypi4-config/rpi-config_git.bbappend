@@ -21,7 +21,7 @@ do_deploy:append() {
 
     echo "# Audio Setting" >> $CONFIG
     echo "dtparam=audio=on" >> $CONFIG
-    echo "dtoverlay=vc4-kms-v3d,noaudio" >> $CONFIG
+    echo "dtoverlay=vc4-kms-v3d,audio" >> $CONFIG
 
     echo "#start_x=1" >> $CONFIG
 }

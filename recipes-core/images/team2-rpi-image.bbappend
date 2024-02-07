@@ -9,6 +9,7 @@ ENV_SETTING = " \
 	openssh \
 	bcm2835-dev \
 	udev-rules-rpi \
+	udev-extraconf \
 	supervisor \
 	xdotool \
 "
@@ -20,8 +21,10 @@ META_OE = " \
 
 FLUTTER_APP = " \
 	dashboard \
+	dashboard-dev \
 	dashboard-auto \
 	headunit \
+	headunit-dev \
 	headunit-auto \
 	touchscreen-init \
 	window-init \
