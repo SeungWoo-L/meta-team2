@@ -60,6 +60,37 @@ And also edit `conf/layer.conf` file.
   LICENSE_FLAGS_ACCEPTED += "commercial"
   ```
 
+### Change meta-raspberrypi conf
+
+You have to use meta-raspberrypi master branch but change this line in meta-raspberrypi .conf/layer.conf
+
+```
+LAYERSERIES_COMPAT_raspberrypi = "kirkstone"
+```
+
+### Error and Solution Guide
+
+> **WARNING**:
+```bash
+ERROR: No recipes in default available for:
+/home/seame02/poky/meta-raspberrypi/dynamic-layers/multimedia-layer/recipes-multimedia/libcamera/libcamera_%.bbappend
+```
+<b>Solution
+If you see this error while you are executing a bitbake command, it indicates an issue with the <code>libcamera_%.bbappend</code> file. To resolve this, please follow the steps below:
+
+1. Navigate to the directory containing the problematic file:
+   ```bash
+   cd /home/seame02/poky/meta-raspberrypi/dynamic-layers/multimedia-layer/recipes-multimedia/libcamera/
+   ```
+2. Delete the `libcamera_%.bbappend` file:
+   ```bash
+   rm libcamera_%.bbappend
+   ```
+   
+This action should resolve the error, allowing your bitbake process to continue without issues.
+
+
+
 ### Managing Layers
 Instructions for adding and removing layers.
 
