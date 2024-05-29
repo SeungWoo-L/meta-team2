@@ -1,4 +1,4 @@
-SUMMARY = "Basic image for Team2 HeadUnit project"
+SUMMARY = "Basic image for Team2 DES4 project"
 
 inherit core-image
 
@@ -8,7 +8,6 @@ CORE_IMAGE_BASE_INSTALL = "\
 	packagegroup-core-boot \
 	packagegroup-base-extended \
     packagegroup-core-x11 \
-    packagegroup-xfce-base \
 	${CORE_IMAGE_EXTRA_INSTALL} \
 "
 

@@ -19,16 +19,6 @@ META_OE = " \
 	mpv \
 "
 
-FLUTTER_APP = " \
-	dashboard \
-	dashboard-dev \
-	dashboard-auto \
-	headunit \
-	headunit-dev \
-	headunit-auto \
-	touchscreen-init \
-	window-init \
-"
 	
 
 VSOMEIP = " \
@@ -84,6 +74,5 @@ IMAGE_INSTALL += " \
 	${PYTHON_SETTING} \
 	${PIRACER_SETTING} \
 	${CUSTOM_APPS} \
-	${FLUTTER_APP} \
 "
 	
