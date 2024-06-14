@@ -11,7 +11,6 @@ ENV_SETTING = " \
 	udev-rules-rpi \
 	udev-extraconf \
 	supervisor \
-	xdotool \
 "
 
 META_OE = " \
@@ -61,7 +60,9 @@ PIRACER_SETTING = "\
 	python3-piracer-py \
 "
 CUSTOM_APPS = "\
-	canreceiver-dev \
+	cantransceiver \
+	cantransceiver-dev \
+	carinfo \
 	carinfo-dev \
 	carcontrol \
 	carcontrol-dev \

@@ -1,12 +1,11 @@
-SUMMARY = "Can Info Service"
+SUMMARY = "Can Transceiver"
 SECTION = "apps"
 LICENSE = "CLOSED"
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 
-
-SRC_URI = "git://github.com/DES-Team-02/battery_info.git;protocol=https;branch=main"
-SRCREV = "513b3594b7b930639c668e99d45296890f0b4666"
+SRC_URI = "git://github.com/DES-Team-02/DES_4_CanTransceiver.git;protocol=https;branch=dev"
+SRCREV = "1aa35a740981376c9d5e9512abf414099b61cff1"
 
 S = "${WORKDIR}/git"
 
@@ -17,7 +16,5 @@ DEPENDS = " \
            vsomeip \
            common-api-c++-someip \
            python3 \
-           boost \
 "
 
-FILES:${PN}-dev += "${libdir}/piracer/CarInfo"  

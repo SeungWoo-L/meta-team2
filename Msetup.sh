@@ -17,14 +17,10 @@ sed -i 's/LAYERSERIES_COMPAT_raspberrypi = "nanbield"/LAYERSERIES_COMPAT_raspber
 # Add necessary layers
 echo "Adding necessary layers..."
 bitbake-layers add-layer ../meta-raspberrypi
-bitbake-layers add-layer ../meta-clang
-bitbake-layers add-layer ../meta-flutter
 bitbake-layers add-layer ../meta-openembedded/meta-oe
 bitbake-layers add-layer ../meta-openembedded/meta-python
 bitbake-layers add-layer ../meta-openembedded/meta-multimedia
 bitbake-layers add-layer ../meta-openembedded/meta-networking
-bitbake-layers add-layer ../meta-openembedded/meta-gnome
-bitbake-layers add-layer ../meta-openembedded/meta-xfce
 bitbake-layers add-layer ../meta-team2
 
 # Check if addlocal.conf exists
