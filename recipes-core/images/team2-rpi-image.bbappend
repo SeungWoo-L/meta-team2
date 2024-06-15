@@ -11,6 +11,7 @@ ENV_SETTING = " \
 	udev-rules-rpi \
 	udev-extraconf \
 	supervisor \
+	net-tools \
 "
 
 META_OE = " \

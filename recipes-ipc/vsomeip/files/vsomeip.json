@@ -1,0 +1,52 @@
+{
+    "unicast" : "10.42.0.100",
+    "logging" :
+    {
+        "level" : "verbose",
+        "console" : "true",
+        "file" : { "enable" : "true", "path" : "./commonapi.log" },
+        "dlt" : "true"
+    },
+    "services" :
+    [
+        {
+            "__commnet": "CanTransceiver",
+            "service": "3000",
+            "instance": "3001",
+            "reliable": "30010",
+            "unreliable": "30011"
+        },
+        {
+            "__commnet": "CarControl",
+            "service": "4000",
+            "instance": "4001",
+            "reliable": "40010",
+            "unreliable": "40011"
+        },
+        {
+            "__commnet": "CarInfo",
+            "service": "5000",
+            "instance": "5001",
+            "reliable": "50010",
+            "unreliable": "50011"
+        },
+        {
+            "__commnet": "HeadUnit",
+            "service": "6000",
+            "instance": "6001"
+        },
+        {
+            "__comment": "Jetson",
+            "service" : "4661",
+            "instance" : "1234",
+            "reliable" : "30499"
+        }
+    ],
+    "service-discovery" :
+    {
+        "enable" : "true",
+        "multicast" : "224.244.224.245",
+        "port" : "30490",
+        "protocol" : "udp"
+    }
+}

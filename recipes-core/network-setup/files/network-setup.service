@@ -1,0 +1,11 @@
+[Unit]
+Description=Custom Network Setup
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/network-setup.sh
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

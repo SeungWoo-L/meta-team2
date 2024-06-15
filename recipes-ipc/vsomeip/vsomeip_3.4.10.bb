@@ -9,6 +9,7 @@ FILESEXTRAPATHS:prepend := "${THISDIR}/${PN}:"
 SRCREV = "02c199dff8aba814beebe3ca417fd991058fe90c"
 SRC_URI = " \
 	git://github.com/GENIVI/${BPN}.git;protocol=https;nobranch=1; \
+    file://vsomeip.json \
 "
 
 S = "${WORKDIR}/git"
@@ -28,5 +29,7 @@ do_configure:prepend(){
 do_install:append() {
     mv ${D}/usr/etc ${D}
     rm -rf ${D}/etc/vsomeip/*
+
+    install -m 0644 ${WORKDIR}/vsomeip.json ${D}/etc/vsomeip/vsomeip.json
 }
 
